@@ -9,9 +9,9 @@ cd zookeeper-3.4.14
 sudo mkdir data
 cd conf/
 sudo mv zoo_sample.cfg zoo.cfg
-sudo export ip=/path/to/zookeeper/data
-sudo export id=/tmp/zookeeper
-sudo sed -i 's/dataDir='$id'/dataDir='$ip'/' zoo.cfg
+export ip=/path/to/zookeeper/data
+export id=/tmp/zookeeper
+sudo sed -i 's!'$id'!'$ip'!' zoo.cfg
 sudo sed -i 's/initLimit=10/initLimit=5' zoo.cfg
 sudo sed -i 's/syncLimit=5/syncLimit=2' zoo.cfg
 cd /opt/zookeeper-3.4.14
